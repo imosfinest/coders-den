@@ -41,14 +41,22 @@ console.log(challenge.slice(3, 21)); // Days Of JavaScript
 let check = "30 Days Of JavaScript";
 console.log(check.includes("Script")); // true
 
+// --------split()------------------
 //9. Split the string into an array using split() method
 let split = "30 Days Of JavaScript";
 console.log(split.split()); // [ '30 Days Of JavaScript' ] this line of code directly converts the string into an array.
 
+console.log(split.split(""));
 //10. Split the string 30 Days Of JavaScript at the space using split() method
 let split_1 = "30 Days Of JavaScript";
 console.log(split_1.split(" ")); // [ '30', 'Days', 'Of', 'JavaScript' ] This splits the string per word, wrapping them in quotes, making spaces between them and converting the string to an array.
+console.log(split_1.split(","));
+// [ '30 Days Of JavaScript' ]
 
+console.log(split_1.split(","));
+// [ '30 Days Of JavaScript' ]
+
+console.log(split_1.split(" ").join(""));
 //11. 'Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon' split the string at the comma and change it to an array.
 let atTheComma = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon";
 console.log(atTheComma.split(" ")); //
@@ -60,6 +68,22 @@ console.log(atTheComma.split(" ")); //
   'Oracle,',
   'Amazon' ]
   */
+
+console.log(atTheComma.split(", "));
+/* [ 'Facebook',
+  'Google',
+  'Microsoft',
+  'Apple',
+  'IBM',
+  'Oracle',
+  'Amazon' ]
+  */
+
+console.log(atTheComma.split(", ").join(""));
+// FacebookGoogleMicrosoftAppleIBMOracleAmazon;
+
+console.log(atTheComma.split(", ").join("").split());
+//  [ 'FacebookGoogleMicrosoftAppleIBMOracleAmazon' ]
 
 //12. Change 30 Days Of JavaScript to 30 Days Of Python using replace() method.
 let replace = "30 Days Of JavaScript";
